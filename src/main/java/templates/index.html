@@ -12,7 +12,7 @@
 		
 		<!-- user scripts -->
 		<script type="text/javascript" th:src="@{js/UserBox.js}"></script>
-		<script type="text/javascript" th:src="@{js/RenderClient.js}"></script>
+		<script type="text/javascript" th:src="@{js/render.js}"></script>
 	</head>
 
 	<body>
@@ -28,7 +28,7 @@
        /*]]>*/
 	</script>
 		
-	<div id="content"></div>
+	<div id="content" th:utext="${content}"></div>
 	
 	</body>
 

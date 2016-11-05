@@ -19,6 +19,9 @@ public class MutliController {
 	@Autowired
 	private FakeService service;
 	
+	@Autowired
+	private ReactService reactService;
+	
 	
 	@GetMapping(path="/users",  produces = "application/json")
 	@ResponseBody
@@ -33,6 +36,7 @@ public class MutliController {
 		
 		model.addAttribute("title", "React example");
 		model.addAttribute("users", users);
+		model.addAttribute("content", reactService.renderUserBox(users));
 		
 		return "index";
 		
