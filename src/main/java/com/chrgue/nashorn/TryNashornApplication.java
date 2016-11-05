@@ -1,4 +1,4 @@
-package com.example;
+package com.chrgue.nashorn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
