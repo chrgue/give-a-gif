@@ -9,11 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class FakeService {
-	
-	
-	public List<String> createUuids(int count) {
-		return IntStream.range(0, count).boxed()
-				.map(index -> UUID.randomUUID().toString())
-				.collect(Collectors.toList());
+
+	public List<UUID> createUuids(int count) {
+		return IntStream.range(0, count).boxed().map(index -> UUID.randomUUID()).collect(Collectors.toList());
 	}
 }

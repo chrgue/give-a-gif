@@ -1,6 +1,7 @@
 package com.chrgue.nashorn.react;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,32 +14,26 @@ import com.chrgue.nashorn.service.FakeService;
 
 @Controller
 public class MutliController {
-	
+
 	private static final String DEFAULT_COUNT = "10";
-	
+
 	@Autowired
 	private FakeService service;
-	
-	@Autowired
-	private ReactService reactService;
-	
-	
-	@GetMapping(path="/users",  produces = "application/json")
+
+	@GetMapping(path = "/users", produces = "application/json")
 	@ResponseBody
-	public List<String> getIds(@RequestParam(defaultValue=DEFAULT_COUNT) int count) {
+	public List<UUID> getIds(@RequestParam(defaultValue = DEFAULT_COUNT) int count) {
 		return service.createUuids(count);
 	}
-	
+
 	@GetMapping("/users")
-	public String getIdsHtml(@RequestParam(defaultValue=DEFAULT_COUNT) int count, Model model) {
-		List<String> users = service.createUuids(count);
-		
-		
+	public String getIdsHtml(@RequestParam(defaultValue = DEFAULT_COUNT) int count, Model model) {
+		List<UUID> users = service.createUuids(count);
+
 		model.addAttribute("title", "React example");
 		model.addAttribute("users", users);
-		model.addAttribute("content", reactService.renderUserBox(users));
-		
+
 		return "index";
-		
+
 	}
 }
