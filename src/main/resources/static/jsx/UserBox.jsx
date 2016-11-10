@@ -1,14 +1,11 @@
-
 var UserBox = React.createClass({
-    
 	render: function () {
-		
 		var userNodes = this.props.users.map(function (user, index) {
-			return React.createElement("h1", null, user);
+			return <h1>{user}</h1>;
 		});
 		
         return (
-            React.createElement("div", {className: "usersBox"}, userNodes)
+        	<div>{userNodes}</div>
         );
     }
 });

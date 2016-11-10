@@ -49,6 +49,7 @@
 			<artifactId>ejs</artifactId>
 			<version>2.5.2</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -60,6 +61,62 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.2</version>
+				<configuration>
+					<workingDirectory>${basedir}/target/node</workingDirectory>
+					<installDirectory>${basedir}/target/node</installDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>frontend-step1-install-npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<phase>initialize</phase>
+						<configuration>
+							<nodeVersion>v6.9.1</nodeVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>frontend-step2-install-jsx</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<phase>initialize</phase>
+						<configuration>
+							<arguments>install -g react-tools</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>frontend-step3-run-jsx</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>${basedir}/target/node/bin/jsx</executable>
+							<environmentVariables>
+								<PATH>${env.PATH}:${pom.basedir}/target/node/node</PATH>
+							</environmentVariables>
+							<arguments>
+								<argument>--extension</argument>
+								<argument>jsx</argument>
+								<argument>${basedir}/src/main/resources/static/jsx</argument>
+								<argument>${basedir}/target/classes/static/js</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
