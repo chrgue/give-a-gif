@@ -3,7 +3,6 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title th:text="${title}"></title>
 		
 		<!-- webjars -->
 		<script type="text/javascript" src="webjars/react/15.3.1/react.min.js"></script>
@@ -11,17 +10,23 @@
 		<script type="text/javascript" src="webjars/jquery/3.1.1/jquery.min.js"></script>
 		
 		<!-- user scripts -->
-		<script type="text/javascript" th:src="js/UserBox.js"></script>
-		<script type="text/javascript" th:src="js/render.js"></script>
+		<script type="text/javascript" src="js/components/App.js"></script>
+		<script type="text/javascript" src="js/render.js"></script>
+		
+		<script type="text/javascript">
+			var INITIAL_DATA = <%-data%>;
+			
+			$(function() {
+				renderClient(INITIAL_DATA);
+			});
+			
+		</script>
 	</head>
 
 	<body>
-	
-		
-	<div id="content">
-		<%- ReactDOMServer.renderToString(React.createElement(UserBox, {users: users})) %>
-	</div>
-	
+		<div id="content">
+			<%- ReactDOMServer.renderToString(React.createElement(App, {users: JSON.parse(data).users})) %>
+		</div>
 	</body>
 
 </html>

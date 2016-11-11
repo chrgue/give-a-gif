@@ -1,4 +1,5 @@
-var UserBox = React.createClass({
+var App = React.createClass({
+	
 	render: function () {
 		var userNodes = this.props.users.map(function (user, index) {
 			return <h1>{user}</h1>;
