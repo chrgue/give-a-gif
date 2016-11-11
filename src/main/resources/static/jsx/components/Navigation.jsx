@@ -1,4 +1,11 @@
 var Navigation = React.createClass({
+
+	getInitialState: function () {
+    	return { title: "JavaScript disabled" };
+  	},
+  	componentDidMount: function(){
+  		this.setState({ title: "Up & Running" });
+  	},
 	render: function () {
         return (
         	<nav className="navbar navbar-default">
@@ -11,7 +18,7 @@ var Navigation = React.createClass({
 								className="icon-bar"></span> <span className="icon-bar"></span> <span
 								className="icon-bar"></span>
 						</button>
-						<a className="navbar-brand" href="#">Project name</a>
+						<a className="navbar-brand" href="#">{this.state.title}</a>
 					</div>
 					<div id="navbar" className="navbar-collapse collapse">
 						<ul className="nav navbar-nav">
