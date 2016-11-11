@@ -6,7 +6,12 @@ var App = React.createClass({
 		});
 		
         return (
-        	<div>{userNodes}</div>
-        );
+	        <div className="container">
+				<Navigation/>
+				<div className="jumbotron">
+					{userNodes}
+				</div>
+			</div>
+		);
     }
 });
