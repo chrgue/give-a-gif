@@ -5,7 +5,5 @@ var renderServer = function (template, model) {
 	var json = om.writeValueAsString(model);
 	
 	// render the ejs template
-	console.log("sd",json["users"]);
-	console.log("Full", typeof json);
     return ejs.render(template, {data:json});
 };
