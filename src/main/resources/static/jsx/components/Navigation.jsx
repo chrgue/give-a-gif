@@ -1,12 +1,7 @@
-var Navigation = React.createClass({
+import React from 'react';
 
-	getInitialState: function () {
-    	return { title: "JavaScript disabled" };
-  	},
-  	componentDidMount: function(){
-  		this.setState({ title: "Up & Running" });
-  	},
-	render: function () {
+export class Navigation extends React.Component {
+	render() {
         return (
         	<nav className="navbar navbar-default">
 				<div className="container-fluid">
@@ -18,7 +13,7 @@ var Navigation = React.createClass({
 								className="icon-bar"></span> <span className="icon-bar"></span> <span
 								className="icon-bar"></span>
 						</button>
-						<a className="navbar-brand" href="#">{this.state.title}</a>
+						<a className="navbar-brand" href="#">Text</a>
 					</div>
 					<div id="navbar" className="navbar-collapse collapse">
 						<ul className="nav navbar-nav">
@@ -36,11 +31,11 @@ var Navigation = React.createClass({
 									<li className="dropdown-header">Nav header</li>
 									<li><a href="#">Separated link</a></li>
 									<li><a href="#">One more separated link</a></li>
-								</ul></li>
+								</ul>
+							</li>
 						</ul>
 						<ul className="nav navbar-nav navbar-right">
-							<li className="active"><a href="./">Default <span
-									className="sr-only">(current)</span></a></li>
+							<li className="active"><a href="./">Default <span className="sr-only">(current)</span></a></li>
 							<li><a href="../navbar-static-top/">Static top</a></li>
 							<li><a href="../navbar-fixed-top/">Fixed top</a></li>
 						</ul>
@@ -49,4 +44,4 @@ var Navigation = React.createClass({
 			</nav>
 		);
     }
-});
+}

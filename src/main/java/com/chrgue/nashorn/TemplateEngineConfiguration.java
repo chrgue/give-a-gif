@@ -23,9 +23,7 @@ public class TemplateEngineConfiguration {
 		configurer.setEngineName("nashorn");
 
 		configurer.setScripts("static/js/polyfill.js", "/META-INF/resources/webjars/ejs/2.5.2/ejs-v2.5.2/ejs.js",
-				"/META-INF/resources/webjars/react/15.3.1/react.min.js",
-				"/META-INF/resources/webjars/react/15.3.1/react-dom-server.min.js", "static/js/render-server.js",
-				"static/js/components/App.js", "static/js/components/Navigation.js");
+				"static/js/server.app.js");
 
 		configurer.setRenderFunction("renderServer");
 		// why are we setting this to false?

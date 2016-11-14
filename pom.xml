@@ -86,38 +86,23 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>frontend-step2-install-jsx</id>
+						<id>frontend-step2-install-packages</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
 						<phase>initialize</phase>
 						<configuration>
-							<arguments>install -g react-tools</arguments>
+							<arguments>install</arguments>
 						</configuration>
 					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<executions>
 					<execution>
-						<id>frontend-step3-run-jsx</id>
-						<phase>generate-sources</phase>
+						<id>npm run build</id>
 						<goals>
-							<goal>exec</goal>
+							<goal>npm</goal>
 						</goals>
+						<phase>generate-resources</phase>
 						<configuration>
-							<executable>${basedir}/target/node/bin/jsx</executable>
-							<environmentVariables>
-								<PATH>${env.PATH}:${pom.basedir}/target/node/node</PATH>
-							</environmentVariables>
-							<arguments>
-								<argument>--extension</argument>
-								<argument>jsx</argument>
-								<argument>${basedir}/src/main/resources/static/jsx</argument>
-								<argument>${basedir}/target/classes/static/js</argument>
-							</arguments>
+							<arguments>run build</arguments>
 						</configuration>
 					</execution>
 				</executions>

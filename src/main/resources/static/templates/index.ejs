@@ -6,24 +6,13 @@
 		
 		<link href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 		
-		<!-- webjars -->
-		<script type="text/javascript" src="webjars/react/15.3.1/react.min.js"></script>
-		<script type="text/javascript" src="webjars/react/15.3.1/react-dom.min.js"></script>
-		<script type="text/javascript" src="webjars/jquery/3.1.1/jquery.min.js"></script>
+		<!-- TODO: move to webpack -->
 		<script type="text/javascript" src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		
 		<!-- user scripts -->
-		<script type="text/javascript" src="js/components/App.js"></script>
-		<script type="text/javascript" src="js/components/Navigation.js"></script>
-		<script type="text/javascript" src="js/render.js"></script>
-		
+		<script type="text/javascript" src="js/client.app.js"></script>
 		<script type="text/javascript">
-			var INITIAL_DATA = <%-data%>;
-			
-			$(function() {
-				renderClient(INITIAL_DATA);
-			});
-			
+			var INITIAL_DATA = <%-data%>;			
 		</script>
 	</head>
 	
