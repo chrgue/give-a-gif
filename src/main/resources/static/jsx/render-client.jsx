@@ -6,7 +6,7 @@ import $ from 'jquery';
 var renderClient = function (initialState) {
 	
     ReactDOM.render(
-    	<App users={initialState.users||[]}/>,
+    	<App data={initialState}/>,
         document.getElementById("content")
     );
 };

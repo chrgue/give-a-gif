@@ -19,7 +19,7 @@ public class AppController {
 		Iterable<Post> posts = repository.findAll();
 
 		model.addAttribute("title", "React example");
-		model.addAttribute("users", posts);
+		model.addAttribute("posts", posts);
 
 		return "index";
 	}

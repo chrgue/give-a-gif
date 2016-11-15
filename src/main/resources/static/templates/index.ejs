@@ -17,7 +17,7 @@
 	</head>
 	
 	<body id="content">
-		<%-ReactDOMServer.renderToString(React.createElement(App,{users:JSON.parse(data).users})) %>
+		<%-ReactDOMServer.renderToString(React.createElement(App,{data:JSON.parse(data)})) %>
 	</body>
 	
 	

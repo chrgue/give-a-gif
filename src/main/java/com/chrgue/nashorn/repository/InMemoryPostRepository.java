@@ -17,13 +17,14 @@ public class InMemoryPostRepository implements PostRepository {
 	@Override
 	public Post save(Post post) {
 		Long id = post.getId();
+
 		if (id == null) {
 			id = counter.incrementAndGet();
 			post.setId(id);
 		}
+
 		this.posts.put(id, post);
 		return post;
-
 	}
 
 	@Override

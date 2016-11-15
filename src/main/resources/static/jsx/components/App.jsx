@@ -4,9 +4,9 @@ import {Navigation} from './Navigation.jsx';
 
 export class App extends React.Component {
   render() {
-		var userNodes = this.props.users.map(function (user, index) {
+		var userNodes = this.props.data.posts.map(function (post) {
 			return (
-				<Post userId={user}/>
+				<Post key={post.id} text={post.text}/>
 			);
 		});
 		
@@ -14,7 +14,7 @@ export class App extends React.Component {
 	        <div className="container">
 				<Navigation/>
 				<div className="panel panel-default">
-  					<div className="panel-heading">Brand new posts<span className="badge">{this.props.users.length}</span></div>
+  					<div className="panel-heading">Brand new posts <span className="badge">{this.props.data.posts.length}</span></div>
   					<div className="panel-body">
 				       <div className="row">{userNodes}</div>
   					</div>
