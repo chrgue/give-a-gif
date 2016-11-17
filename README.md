@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chrgue/try-nashorn.svg?branch=master)](https://travis-ci.org/chrgue/try-nashorn)
+
 This project demonstrates the possibility by using ReactJS for server-side & client-side rendering.
 
 # Motivation
