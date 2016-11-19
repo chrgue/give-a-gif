@@ -2,19 +2,16 @@
 
 This project demonstrates the possibilities by using ReactJS for server-side & client-side rendering.
 
-Motivation
-=
+# Motivation
 Well, what is the motivation behind such a hybrid approach and what problems should it solve?
 
 To answer this let use review other approaches first:
 
-server-side rendering
-====
+### server-side rendering
 * SEO
 * fast inital rendering
 
-client-side rendering
-====
+### client-side rendering
 * established frontend frameworks
 
 # Technologies & Frameworks & Tools
