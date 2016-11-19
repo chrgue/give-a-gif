@@ -1,12 +1,20 @@
 [![Build Status](https://travis-ci.org/chrgue/try-nashorn.svg?branch=master)](https://travis-ci.org/chrgue/try-nashorn)
 
-This project demonstrates the possibility by using ReactJS for server-side & client-side rendering.
+This project demonstrates the possibilities by using ReactJS for server-side & client-side rendering.
 
 # Motivation
-* Why do I want this? :)
+Well, what is the motivation behind such a hybrid approach and what problems should it solve?
+
+To answer this let use review other approaches first:
+
+## server-side rendering
+* SEO
+* inital rendering
+## client-side rendering
+* established frontend frameworks
+
 
 # Technologies & Frameworks & Tools
-
 * [Spring Boot](https://projects.spring.io/spring-boot/)
 * [ReactJS](https://facebook.github.io/react/)
 * [Embedded JavaScript](http://www.embeddedjs.com/)
@@ -14,3 +22,6 @@ This project demonstrates the possibility by using ReactJS for server-side & cli
 * [Twitter Boostrap](http://getbootstrap.com/)
 * [Spring Tool Suite](https://spring.io/tools)
 
+# Current Challenges
+* Performance Testing
+* Routing
