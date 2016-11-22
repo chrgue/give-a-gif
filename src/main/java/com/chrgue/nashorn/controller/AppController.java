@@ -1,5 +1,8 @@
 package com.chrgue.nashorn.controller;
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,11 +19,10 @@ public class AppController {
 
 	@GetMapping("/")
 	public String home(Model model) {
-		Iterable<Post> posts = repository.findAll();
+		Stream<Post> posts = repository.findAll();
 
 		model.addAttribute("title", "React example");
-		model.addAttribute("posts", posts);
-
+		model.addAttribute("posts", posts.collect(Collectors.toList()));
 		return "index";
 	}
 }

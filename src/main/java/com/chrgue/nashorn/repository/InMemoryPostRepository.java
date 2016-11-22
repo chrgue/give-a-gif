@@ -3,6 +3,7 @@ package com.chrgue.nashorn.repository;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.stream.Stream;
 
 import org.springframework.stereotype.Repository;
 
@@ -28,8 +29,8 @@ public class InMemoryPostRepository implements PostRepository {
 	}
 
 	@Override
-	public Iterable<Post> findAll() {
-		return posts.values();
+	public Stream<Post> findAll() {
+		return posts.values().stream();
 	}
 
 }
