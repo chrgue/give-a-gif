@@ -16,16 +16,17 @@ public class TryNashornApplication {
 	@Bean
 	CommandLineRunner initPosts(PostRepository repository) {
 		return args -> {
+
+			// initialize with some data
 			Stream.of("This is a Test", "This is another Test", "Tests Tests Tests", "Stop It!").forEach(text -> {
 				Post p = new Post();
 				p.setText(text);
-
 				repository.save(p);
-
-				System.out.println("---------------------------------");
-				repository.findAll().forEach(System.out::println);
-				System.out.println("---------------------------------");
 			});
+
+			System.out.println("---------------------------------");
+			repository.findAll().forEach(System.out::println);
+			System.out.println("---------------------------------");
 		};
 	}
 
