@@ -1,4 +1,4 @@
-package com.example;
+package com.chrgue.nashorn;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
