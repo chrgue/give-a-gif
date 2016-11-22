@@ -23,5 +23,4 @@ To answer this let use review other approaches first:
 * [Spring Tool Suite](https://spring.io/tools)
 
 ## Current Challenges
-* Performance Testing
 * Routing
