@@ -3,14 +3,11 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet">
-		
-		<!-- TODO: move to webpack -->
-		<script type="text/javascript" src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
-		
-		<!-- user scripts -->
+		<link rel="stylesheet" href="style/client.css">
 		<script type="text/javascript" src="js/client.app.js"></script>
+		
 		<script type="text/javascript">
 			var INITIAL_DATA = <%-data%>;			
 		</script>
@@ -19,6 +16,4 @@
 	<body id="content">
 		<%-ReactDOMServer.renderToString(React.createElement(App,{data:JSON.parse(data)})) %>
 	</body>
-	
-	
 </html>
