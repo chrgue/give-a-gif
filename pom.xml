@@ -22,7 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		
+
 		<loadtest.host>give-a-gif.herokuapp.com</loadtest.host>
 		<loadtest.port></loadtest.port>
 	</properties>
@@ -123,18 +123,25 @@
 				<configuration>
 					<testResultsTimestamp>false</testResultsTimestamp>
 					<propertiesUser>
-                        <webservice.host>${loadtest.host}</webservice.host>
-                        <webservice.port>${loadtest.port}</webservice.port>
-                    </propertiesUser>
+						<webservice.host>${loadtest.host}</webservice.host>
+						<webservice.port>${loadtest.port}</webservice.port>
+					</propertiesUser>
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>com.lazerycode.jmeter</groupId>
-				<artifactId>jmeter-analysis-maven-plugin</artifactId>
-				<version>1.0.4</version>
+				<groupId>de.codecentric</groupId>
+				<artifactId>jmeter-graph-maven-plugin</artifactId>
+				<version>0.1.0</version>
 				<configuration>
-					<source>${project.build.directory}/jmeter/results/startpage.jtl</source>
-					<targetDirectory>${project.build.directory}/jmeter/results/report</targetDirectory>
+					<inputFile>${project.build.directory}/jmeter/results/loadtest.jtl</inputFile>
+					<graphs>
+						<graph>
+							<pluginType>ResponseTimesOverTime</pluginType>
+							<width>800</width>
+							<height>600</height>
+							<outputFile>${project.build.directory}/jmeter/results/report/img/loadtest.png</outputFile>
+						</graph>
+					</graphs>
 				</configuration>
 			</plugin>
 		</plugins>
