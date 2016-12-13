@@ -22,6 +22,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		
+		<loadtest.host>give-a-gif.herokuapp.com</loadtest.host>
+		<loadtest.port></loadtest.port>
 	</properties>
 
 	<dependencies>
@@ -119,6 +122,10 @@
 				<version>2.0.3</version>
 				<configuration>
 					<testResultsTimestamp>false</testResultsTimestamp>
+					<propertiesUser>
+                        <webservice.host>${loadtest.host}</webservice.host>
+                        <webservice.port>${loadtest.port}</webservice.port>
+                    </propertiesUser>
 				</configuration>
 			</plugin>
 			<plugin>
