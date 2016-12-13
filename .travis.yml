@@ -1,8 +1,9 @@
 language: java
+jdk:
+  - oraclejdk8
 
 sudo: false
 
 script: mvn clean test
 
-jdk:
-- oraclejdk8
+after_deploy: mvn jmeter:jmeter
