@@ -13,8 +13,8 @@ rev=$(git rev-parse --short HEAD)
 # run the load tests
 mvn jmeter:jmeter
 
-# create load test results
-mvn jmeter-analysis:analyze
+# create load test results image
+mvn jmeter-graph:create-graph
 
 
 cd target/jmeter/results/report
