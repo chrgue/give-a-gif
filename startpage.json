@@ -1,0 +1,11 @@
+{
+  "performanceData":
+  [
+    {
+      "min": 201,
+      "max": 5456,
+      "quantile90": 4184,
+      "average": 1955
+    }
+  ]
+}
