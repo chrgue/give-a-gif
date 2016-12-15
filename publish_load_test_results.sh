@@ -11,14 +11,18 @@ fi
 rev=$(git rev-parse --short HEAD)
 
 # run the load tests
-mvn jmeter:jmeter
+#mvn jmeter:jmeter
 
 # create load test results image
-mvn jmeter-graph:create-graph
+#mvn jmeter-graph:create-graph
+
+# go into the sources of the docs
+cd docs
+# generate the docs
+jekyll build
 
 
-cd target/jmeter/results/report
-
+cd _site
 git init
 git config user.name "Christian Günther"
 git config user.email "chr.gue@gmail.com"
