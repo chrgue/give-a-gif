@@ -1,5 +1,5 @@
 language: java
-sudo: false
+sudo: true
 install:
   - apt-get install ruby
   - gem install jekyll
