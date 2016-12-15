@@ -1,7 +1,7 @@
 language: java
 sudo: true
 install:
-  - sudo apt-get install ruby
+  - sudo apt-get install ruby2.3-dev
   - sudo gem install jekyll
 script: mvn clean test
 deploy:
