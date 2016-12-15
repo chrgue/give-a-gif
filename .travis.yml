@@ -8,7 +8,7 @@ env:
  
 install:
   - ruby --version
-  - gem --version
+  - gem install --user-install jekyll
   
 script: mvn clean test
 
