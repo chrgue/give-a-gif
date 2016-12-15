@@ -1,8 +1,8 @@
 language: java
 sudo: true
 install:
-  - apt-get install ruby
-  - gem install jekyll
+  - sudo apt-get install ruby
+  - sudo gem install jekyll
 script: mvn clean test
 deploy:
   provider: heroku
