@@ -8,6 +8,7 @@ env:
  
 install:
   - ruby --version
+  - gem --version
   
 script: mvn clean test
 
