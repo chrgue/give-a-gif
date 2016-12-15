@@ -1,6 +1,4 @@
-language:
-  - java
-  - ruby
+language: java
 sudo: true
 jdk:
   - oraclejdk8
@@ -9,7 +7,7 @@ env:
     secure: zJrFCrDrHThU9dtoq0zlXz2b3NWR0ih3We3oWGO5P+ycOEYh7uVlB06sZN2ivxuKn1xgvttWxnMrO9S/ZPox9SacKtVr07UkuRULKD5TJAfj9UDjobWYXCksTy1Gfn4EjsZhebvXwwyXhIATVh0ynZ2PIw9m4mPXMpir9a7dyRz9dV9y1x/oOlNTAwhEaZDSBeTJkS+qQwHArPCTovrY8I7GvUt7xOjgm1Zk2/Pf8dGMvmcrG3mxIVHHnz6GplOV1FOqK+Gon+7vY0WowT9gMg9WAIszxR2p0ai3/hC7/+MHVlQ7eBwmFAeepQytsZnsp4q0sBoNKnlg8MYv7Uio3KPzMW7LWH3UXPMn0rfhdFo71jUE/2dE3uRysRnTyAK1F8ywlKW9tR1oTN6scAP5Cf4x1dB32nGG7LAD6U+lnaR50x4LRQ1fKzz7aRHGc62bq5Gobp1IDHIum5n4fHU5Bpf2YRtZUcG4F28eviILwb7Ro84QcZvDMFYsNOt8vMW9pJamZIdab1vSKQxBf1+Ch2K2LHcVstBekYwiqudK2mUvSe/XIkcQrhFRZBKy9cyOGDJfUkPUuIGekFp6fy58V8u7obM+pCsPIDGOS7CYmCB8flRqASV9iyfIKt4dgNXHcFdWlxKZBYGohkKA21aACPvYxLZy4NzyBUdZUp1tc5g=
  
 install:
-  - sudo gem install jekyll
+  - ruby --version
   
 script: mvn clean test
 
