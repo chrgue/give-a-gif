@@ -25,6 +25,7 @@
 
 		<loadtest.host>give-a-gif.herokuapp.com</loadtest.host>
 		<loadtest.port></loadtest.port>
+		<loadtest.output>${project.build.directory}/jmeter/results/report/img/loadtest.png</loadtest.output>
 	</properties>
 
 	<dependencies>
@@ -139,7 +140,7 @@
 							<pluginType>ResponseTimesOverTime</pluginType>
 							<width>800</width>
 							<height>600</height>
-							<outputFile>${project.build.directory}/jmeter/results/report/img/loadtest.png</outputFile>
+							<outputFile>${loadtest.output}</outputFile>
 						</graph>
 					</graphs>
 				</configuration>

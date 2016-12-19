@@ -10,19 +10,21 @@ fi
 
 rev=$(git rev-parse --short HEAD)
 
+# create folder for doc output
+mkdir doc_output
+
+
+# generate static docs
+jekyll build --source docs --destination doc_output
+
 # run the load tests
-#mvn jmeter:jmeter
+mvn jmeter:jmeter
 
 # create load test results image
-#mvn jmeter-graph:create-graph
+mvn jmeter-graph:create-graph -Dloadtest.output="doc_output/assets/images/loadtest.png"
 
-# go into the sources of the docs
-cd docs
-# generate the docs
-jekyll build
+cd doc_output
 
-
-cd _site
 git init
 git config user.name "Christian Günther"
 git config user.email "chr.gue@gmail.com"
