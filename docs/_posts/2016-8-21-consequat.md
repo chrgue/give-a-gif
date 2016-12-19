@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Development Setup
-description: -
+description: Things I used to developing this project
 image: assets/images/pic05.jpg
 ---
 
