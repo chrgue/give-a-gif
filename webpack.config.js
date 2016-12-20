@@ -50,6 +50,12 @@ module.exports = {
 			jQuery : 'jquery',
 			$: 'jquery'
 		}),
-		new ExtractTextPlugin("style/[name].css")
+		new ExtractTextPlugin("style/[name].css"),
+		new webpack.DefinePlugin({
+			  'process.env': {
+			    NODE_ENV: JSON.stringify('production')
+			  }
+			}),
+		new webpack.optimize.UglifyJsPlugin()
 	]
 };
