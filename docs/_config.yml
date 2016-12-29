@@ -9,6 +9,9 @@ author: Christian Günther
 city: Berlin
 country: Germany
 
+# Link to the actual result
+product_url: http://give-a-gif.herokuapp.com/
+
 # Homepage tiles
 tiles-source: posts # accepts "posts" or "pages"
 tiles-count: 10
