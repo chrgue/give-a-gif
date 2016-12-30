@@ -3,7 +3,7 @@ title: give-a-gif
 subtitle: by chrgue
 email: youremailaddress@gmail.com
 description: Isomophic JavaScript with React and spring boot.
-baseurl: "/try-nashorn" # the subpath of your site, e.g. /blog
+baseurl: "/give-a-gif" # the subpath of your site, e.g. /blog
 url: "https://chrgue.github.io" # the base hostname & protocol for your site
 author: Christian Günther 
 city: Berlin
