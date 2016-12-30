@@ -1,4 +1,4 @@
-# Try Nashhorn [![Build Status](https://travis-ci.org/chrgue/try-nashorn.svg?branch=master)](https://travis-ci.org/chrgue/try-nashorn) [![Dependency Status](https://www.versioneye.com/user/projects/58306327ee1db3003f3a1086/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58306327ee1db3003f3a1086)
+# Try Nashhorn [![Build Status](https://travis-ci.org/chrgue/try-nashorn.svg?branch=master)](https://travis-ci.org/chrgue/give-a-gif) [![Dependency Status](https://www.versioneye.com/user/projects/58306327ee1db3003f3a1086/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58306327ee1db3003f3a1086)
 
 This project demonstrates the possibilities by using ReactJS for server-side & client-side rendering.
 
