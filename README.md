@@ -1,4 +1,4 @@
-# Give a gif [![Build Status](https://travis-ci.org/chrgue/try-nashorn.svg?branch=master)](https://travis-ci.org/chrgue/give-a-gif) [![Dependency Status](https://www.versioneye.com/user/projects/58306327ee1db3003f3a1086/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58306327ee1db3003f3a1086)
+# Give a gif [![Build Status](https://travis-ci.org/chrgue/give-a-gif.svg?branch=master)](https://travis-ci.org/chrgue/give-a-gif) [![Dependency Status](https://www.versioneye.com/user/projects/58306327ee1db3003f3a1086/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58306327ee1db3003f3a1086)
 
 This project demonstrates the possibilities by using ReactJS for server-side & client-side rendering.
 
@@ -21,6 +21,3 @@ To answer this let use review other approaches first:
 * [Redux](http://redux.js.org/)
 * [Twitter Boostrap](http://getbootstrap.com/)
 * [Spring Tool Suite](https://spring.io/tools)
-
-## Current Challenges
-* Routing
