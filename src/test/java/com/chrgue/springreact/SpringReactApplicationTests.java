@@ -1,6 +1,6 @@
-package com.chrgue.nashorn;
+package com.chrgue.springreact;
 
-import static com.chrgue.nashorn.RegexMatcher.matches;
+import static com.chrgue.springreact.RegexMatcher.matches;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 
@@ -14,8 +14,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.jayway.restassured.RestAssured;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = TryNashornApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
-public class TryNashornApplicationTests {
+@SpringBootTest(classes = SpringReactApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+public class SpringReactApplicationTests {
 
 	@Value("${local.server.port}")
 	int port;

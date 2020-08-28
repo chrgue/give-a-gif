@@ -1,4 +1,4 @@
-package com.chrgue.nashorn.repository;
+package com.chrgue.springreact.repository;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -9,9 +9,7 @@ import java.util.stream.Stream;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.chrgue.nashorn.model.Post;
-import com.chrgue.nashorn.repository.InMemoryPostRepository;
-import com.chrgue.nashorn.repository.PostRepository;
+import com.chrgue.springreact.model.Post;
 
 public class InMemoryPostRepositoryTest {
 

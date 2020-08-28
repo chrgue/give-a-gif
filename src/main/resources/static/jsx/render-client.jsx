@@ -7,13 +7,10 @@ import 'bootstrap';
 // loads the bootstrap css
 import 'bootstrap/dist/css/bootstrap.css';
 
-var renderClient = function (initialState) {
-    ReactDOM.render(
-    	<App data={initialState}/>,
-        document.getElementById("content")
-    );
+var renderClient = function (state) {
+    ReactDOM.render(<App data={state}/>, document.getElementById("content"));
 };
 
 $(function() {
-	renderClient(window.INITIAL_DATA || {});
+	renderClient(window.STATE);
 });

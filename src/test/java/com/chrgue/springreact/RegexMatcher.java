@@ -1,4 +1,4 @@
-package com.chrgue.nashorn;
+package com.chrgue.springreact;
 
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;

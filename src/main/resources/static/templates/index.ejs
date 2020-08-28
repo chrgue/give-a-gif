@@ -9,11 +9,11 @@
 		<script type="text/javascript" src="js/client.app.js"></script>
 		
 		<script type="text/javascript">
-			var INITIAL_DATA = <%-data%>;			
+			var STATE = <%-state%>;
 		</script>
 	</head>
 	
 	<body id="content">
-		<%-ReactDOMServer.renderToString(React.createElement(App,{data:JSON.parse(data)})) %>
+		<%- renderedHTML %>
 	</body>
 </html>

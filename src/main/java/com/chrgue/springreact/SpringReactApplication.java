@@ -1,4 +1,4 @@
-package com.chrgue.nashorn;
+package com.chrgue.springreact;
 
 import java.util.stream.Stream;
 
@@ -7,11 +7,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.chrgue.nashorn.model.Post;
-import com.chrgue.nashorn.repository.PostRepository;
+import com.chrgue.springreact.model.Post;
+import com.chrgue.springreact.repository.PostRepository;
 
 @SpringBootApplication
-public class TryNashornApplication {
+public class SpringReactApplication {
 
 	@Bean
 	CommandLineRunner initPosts(PostRepository repository) {
@@ -31,6 +31,6 @@ public class TryNashornApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(TryNashornApplication.class, args);
+		SpringApplication.run(SpringReactApplication.class, args);
 	}
 }

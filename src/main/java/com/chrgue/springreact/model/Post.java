@@ -1,4 +1,4 @@
-package com.chrgue.nashorn.model;
+package com.chrgue.springreact.model;
 
 import lombok.Data;
 

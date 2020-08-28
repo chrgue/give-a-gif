@@ -1,4 +1,4 @@
-package com.chrgue.nashorn.config;
+package com.chrgue.springreact.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
